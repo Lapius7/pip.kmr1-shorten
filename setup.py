@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="kmr1-shorten",
-    version="1.0.2",
+    version="1.0.3",
     packages=["kmr1_shorten"],
     install_requires=[],
     entry_points={

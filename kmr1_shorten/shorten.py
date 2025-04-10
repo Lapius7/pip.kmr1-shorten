@@ -26,7 +26,7 @@ def shorten_url(url, custom_characters=None):
             elif "error" in json_response:
                 print(f"エラー: {json_response['error']}")
             else:
-                print("エラー: APIレスポンスに短縮URLまたはトラッキングIDが含まれていません。")
+                print("エラー: APIレスポンスにバグが発生している又は既に使用されているカスタム文字列です。")
     except Exception as e:
         print(f"リクエストエラー: {e}")
 
