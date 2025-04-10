@@ -32,15 +32,15 @@ def shorten_url(url, custom_characters=None):
 
 def main():
     cmd_name = sys.argv[0].split('/')[-1].split('\\')[-1]
-    if "kmr1_shorten" in cmd_name:
-        usage = "kmr1_shorten <URL> [-c <カスタム文字列>]"
+    if "kmr1-shorten" in cmd_name:
+        usage = "kmr1-shorten <URL> [-c <カスタム文字列>]"
     elif "k1s" in cmd_name:
         usage = "k1s <URL> [-c <カスタム文字列>]"
     else:
         usage = "<command> <URL> [-c <カスタム文字列>]"
 
     parser = argparse.ArgumentParser(
-        description="Kmr¹ APIを使用してURLを短縮します。Kmr¹API公式 https://api.kmr1.org/v1/use",
+        description="Kmr¹ APIを使用してURLを短縮します。Kmr¹API公式ドキュメント https://api.kmr1.org/v1/use",
         usage=usage
     )
     parser.add_argument("url", help="短縮したいURL")
