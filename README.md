@@ -1,4 +1,4 @@
-# kmr1-shorten [![PyPI Downloads](https://static.pepy.tech/badge/kmr1-shorten)](https://pepy.tech/projects/kmr1-shorten)
+# kmr1-shorten 1.0.4 [![PyPI Downloads](https://static.pepy.tech/badge/kmr1-shorten)](https://pepy.tech/projects/kmr1-shorten)
 
 Kmr¹ APIを使用してURLを短縮するコマンドラインツールです。  
 Kmr¹API公式ドキュメント https://api.kmr1.org/v1/use  
