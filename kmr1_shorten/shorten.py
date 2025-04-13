@@ -3,6 +3,7 @@ import argparse
 from urllib.parse import urlparse, urlencode
 from urllib.request import urlopen
 import json
+import pyperclip
 
 def is_valid_url(url):
     try:
@@ -21,8 +22,12 @@ def shorten_url(url, custom_characters=None):
         with urlopen(api_url, data=post_data) as response:
             json_response = json.loads(response.read().decode("utf-8"))
             if "short_url" in json_response and "tracking_id" in json_response:
-                print(f"Short_URL: {json_response['short_url']}")
-                print(f"Tracking_ID: {json_response['tracking_id']}")
+                short_url = json_response['short_url']
+                tracking_id = json_response['tracking_id']
+                print(f"Short_URL: {short_url}")
+                print(f"Tracking_ID: {tracking_id}")
+                pyperclip.copy(short_url)
+                print("✅ 短縮URLをクリップボードにコピーしました。")
             elif "error" in json_response:
                 print(f"エラー: {json_response['error']}")
             else:
